@@ -10,11 +10,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             type: 'basic',
             iconUrl: 'icon48.png',
             title: 'Alarm',
-            message: 'It\'s time!',
-            requireInteraction: true
-          }, () => {
-            const audio = new Audio(chrome.extension.getURL('alarm.mp3'));
-            audio.play();
+            message: 'It\'s time!'
           });
         }
       });
