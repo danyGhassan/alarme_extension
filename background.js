@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       if (alarm.name === 'alarm') {
         chrome.notifications.create('alarm-notification', {
           type: 'basic',
-          iconUrl: 'icon48.png',
+          iconUrl: 'icons48.png',
           title: 'Alarm',
           message: 'It\'s time!',
           requireInteraction: true
