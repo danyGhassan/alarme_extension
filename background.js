@@ -13,8 +13,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             message: 'It\'s time!',
             requireInteraction: true
           }, () => {
-            // Play the alarm sound when the notification is created
-            const audio = new Audio(chrome.runtime.getURL('alarm.mp3'));
+            const audio = new Audio(chrome.extension.getURL('alarm.mp3'));
             audio.play();
           });
         }
