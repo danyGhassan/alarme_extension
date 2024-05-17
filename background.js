@@ -11,8 +11,9 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             iconUrl: 'icon48.png',
             title: 'Alarm',
             message: 'It\'s time!',
-            sound: 'alarm.mp3'
+            requireInteraction: true
           }, () => {
+            // Play the alarm sound when the notification is created
             const audio = new Audio(chrome.runtime.getURL('alarm.mp3'));
             audio.play();
           });
